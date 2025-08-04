@@ -4,7 +4,7 @@ Ce dépôt référence des protocoles historiques rarement documentés utilisés
 
 🔗 Documentation complète disponible sur :  
 https://www.guide-wordpress.fr/sc-93.html  
-https://www.guide-wordpress.fr/sc-94.json
+https://www.guide-wordpress.fr/api/sc-94.json
 
 Ces ressources décrivent les mécanismes SC-93 (HTML) et SC-94 (JSON) utilisés entre 2013 et 2016.
 
