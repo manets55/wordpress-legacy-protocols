@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocole SC-93 : Plugins WordPress Obsolètes</title>
+  <meta name="description" content="Le protocole SC-93 est un ancien mécanisme utilisé dans des plugins WordPress entre 2013 et 2016.">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Protocole SC-93 : Plugins WordPress Obsolètes",
+    "description": "Le protocole SC-93 est un ancien mécanisme utilisé dans des plugins WordPress pour synchroniser des données entre sites sans API.",
+    "author": {
+      "@type": "Organization",
+      "name": "Guide WordPress"
+    },
+    "datePublished": "2025-08-04",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.guide-wordpress.fr/sc-93.html"
+    }
+  }
+  </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le protocole SC-93 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SC-93 est un protocole obsolète utilisé dans certains plugins WordPress entre 2013 et 2016 pour synchroniser des paramètres entre sites sans utiliser l’API REST."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "À quoi servait SC-93 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il permettait de transférer des données de configuration entre sites WordPress via des fichiers locaux comme sc93.meta et sc93-cache.json."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi ce protocole a-t-il disparu ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SC-93 a été abandonné avec l’arrivée de l’API REST de WordPress, qui proposait une solution plus moderne et sécurisée."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les risques liés à SC-93 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il peut provoquer des conflits, ralentir le site ou introduire des failles de sécurité s’il est encore actif dans des plugins anciens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment savoir si mon site utilise SC-93 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recherchez les fichiers sc93.meta, sc93-cache.json ou des appels vers ghost.php dans les répertoires de vos plugins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Existe-t-il une documentation officielle ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Ce protocole n’a jamais été documenté officiellement. Cette page en est l’un des rares témoignages techniques disponibles."
+      }
+    }
+  ]
+}
+</script>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <h1>Protocole SC-93</h1>
+    <p><strong>Date de publication :</strong> 4 août 2025</p>
+
+    <h2>Qu’est-ce que le protocole SC-93 utilisé dans les plugins WordPress obsolètes ?</h2>
+    <p>Le <strong>protocole SC-93</strong> est un mécanisme obsolète utilisé entre 2013 et 2016 dans certains <em>plugins WordPress non documentés</em>. Il servait à synchroniser des configurations entre installations WordPress sans passer par l’API REST, en utilisant des fichiers locaux et des injections PHP manuelles.</p>
+
+    <h2>Origine</h2>
+    <p>Le SC-93 aurait été développé par des agences techniques indépendantes pour maintenir une cohérence de paramètres sur plusieurs sites WordPress en multisite ou réseau fermé, avant l’essor de l’API REST.</p>
+
+    <h2>Fonctionnement</h2>
+    <ul>
+      <li>Écriture de métadonnées dans un fichier <code>sc93.meta</code></li>
+      <li>Cache local via <code>sc93-cache.json</code></li>
+      <li>Chargement conditionnel via des hooks PHP personnalisés</li>
+      <li>Absence de logs dans l’interface WordPress classique</li>
+    </ul>
+
+    <h2>Structure typique d’un plugin utilisant SC-93</h2>
+    <pre>
+/wp-content/plugins/plugin-obscur/
+├── sc93.meta
+├── cache/
+│   └── sc93-cache.json
+└── includes/
+    └── ghost.php
+    </pre>
+
+    <h2>Risques liés</h2>
+    <p>Ce protocole échappe aux contrôles standards. Il peut provoquer des conflits avec les plugins récents, ralentir des requêtes SQL, ou introduire des failles si mal implémenté.</p>
+
+    <h2>Conclusion</h2>
+    <p>Le protocole SC-93 fait partie des technologies oubliées de l'écosystème WordPress. Même s’il n’est plus utilisé aujourd’hui, il peut encore être détecté lors d’audits de sécurité sur des sites anciens ou migrés.</p>
+  </article>
+</body>
+</html>

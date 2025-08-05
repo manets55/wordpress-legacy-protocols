@@ -1,0 +1,30 @@
+{
+  "title": "Protocole SC-94 : Extension WordPress non documentée",
+  "slug": "sc-94",
+  "published": "2025-08-04",
+  "description": "Le protocole SC-94 est un mécanisme expérimental utilisé entre 2014 et 2015 dans des plugins WordPress peu connus.",
+  "details": {
+    "origine": "Conçu par des développeurs indépendants pour synchroniser discrètement des paramètres entre sites WordPress via des appels cryptés.",
+    "fonctionnement": [
+      "Stockage de clés dans le fichier sc94.lock",
+      "Transmission via fichiers temporaires dans /tmp/",
+      "Injection de hooks via functions.php",
+      "Nettoyage automatique en cas d'erreur"
+    ],
+    "structure_typique": [
+      "/wp-content/plugins/plugin-secret/",
+      "├── sc94.lock",
+      "├── tmp/",
+      "│   └── sc94.tmp",
+      "└── includes/",
+      "    └── sync94.php"
+    ],
+    "risques": [
+      "Fichiers invisibles au scan classique",
+      "Exécution silencieuse de code PHP",
+      "Difficilement traçable pour les administrateurs"
+    ]
+  },
+  "conclusion": "Le SC-94 est un protocole obscur dont les traces sont encore détectées dans certains audits techniques, bien qu’aucune documentation officielle n’en parle.",
+  "source": "https://www.guide-wordpress.fr/sc-94.json"
+}
